@@ -1,0 +1,20 @@
+{
+  "name": "ld-msw-auth-issue",
+  "version": "0.0.1",
+  "description": "issue reproduction where mock service worker prevents launch darkly from authenticating.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node testWithMSW.js",
+    "start": "node testWithMSW.js",
+    "testWithMSW": "node testWithMSW.js",
+    "testWithoutMSW": "node testWithoutMSW.js",
+    "testWithFullMSWMocks": "node testWithFullMSWMocks.js"
+  },
+  "author": "Daniel Harris",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "launchdarkly-node-server-sdk": "^6.2.0",
+    "msw": "^0.35.0"
+  }
+}
