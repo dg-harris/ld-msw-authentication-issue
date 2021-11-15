@@ -10,13 +10,17 @@ setupServer(
       async (req, res, ctx) => {
         // Uncomment to reference the original response inside the mock
         // const originalResponse = await ctx.fetch(req)
-        // Not returning anything here so MSW uses the original response
+
+        // intentionally not returning anything here so MSW uses the original response
+        return
       }
     ),
     rest.get("https://stream.launchdarkly.com/all", async (req, res, ctx) => {
       // Uncomment to reference the original response inside the mock
       // const originalResponse = await ctx.fetch(req)
-      // Not returning anything here so MSW uses the original response
+
+      // intentionally Not returning anything here so MSW uses the original response
+      return
     }),
   ]
 ).listen();
